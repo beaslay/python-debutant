@@ -4,7 +4,7 @@ import os
 import csv
 
 # Dossier à scanner (ex: "/home/julien/Images")
-dossier_images = "/home/artiste/Desktop/test"
+dossier_images = "/home/artiste/Téléchargements"
 
 # Vérifie si le dossier existe
 if not os.path.exists(dossier_images):
