@@ -1,5 +1,8 @@
 # Projet Python Débutant
 
+![Tests](https://github.com/beaslay/python-debutant/actions/workflows/tests.yml/badge.svg)
+
+
 ## 📚 Contenu
 - `lecons/` : toutes les leçons au format Markdown
 - `exercices/` : exercices corrigés avec astuce # TYPE / # BUT
