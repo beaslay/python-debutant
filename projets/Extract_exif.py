@@ -2,7 +2,7 @@ from PIL import Image
 import os
 
 # Dossier contenant les images à nettoyer
-dossier_images = "/home/artiste/Téléchargements"
+dossier_images = ":/home/artiste/Téléchargements"
 
 # Fonction pour supprimer les EXIF d'une image
 def supprimer_exif(image_path):
