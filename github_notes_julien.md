@@ -1,3 +1,4 @@
+
 ## 🧠 GitHub & Git - Notes personnelles de Julien
 
 Bienvenue dans ta forge personnelle, Julien. Ce fichier est ton **grimoire GitHub**, à enrichir au fil de tes découvertes et expérimentations.
@@ -43,6 +44,81 @@ git add .        # Ajouter tous les fichiers modifiés au prochain commit
 git commit -m "message"  # Créer un point de sauvegarde
 git push origin nom-de-branche  # Envoyer sur GitHub
 ```
+
+### ⚔️ Fusion manuelle avec GitHub (conflit de `push`)
+
+Lorsque Git refuse un `push` car la branche distante contient déjà un commit (ex : via GitHub web), il faut :
+
+1. **Récupérer les changements distants :**
+```bash
+git pull origin master --no-rebase
+```
+
+2. **(optionnel)** Modifier le message de commit de merge :
+   - VS Code : modifier la ligne 1, sauvegarder (`Ctrl+S`), fermer.
+   - Vim : `:wq` pour valider
+
+3. **Pousser les changements fusionnés :**
+```bash
+git push origin master
+```
+
+Ce processus permet de **réconcilier le local et le distant** proprement.
+
+---
+
+## 🧹 .gitignore minimaliste pour dépôt propre
+
+Créer un fichier `.gitignore` :
+
+```bash
+vim .gitignore
+```
+
+Contenu de base :
+```
+# === FICHIERS TEMPORAIRES ===
+*.swp
+*.swo
+*~
+
+# === NOTES VOLATILES ===
+notes_temp.md
+drafts/
+logs/
+
+# === SYSTÈMES INDÉSIRABLES ===
+.DS_Store
+Thumbs.db
+```
+
+Puis :
+```bash
+git add .gitignore
+git commit -m "🔒 Ajout du .gitignore pour garder le dépôt propre"
+git push
+```
+
+---
+
+## 📁 README.md brut et structurant
+
+Un bon `README.md` doit :
+- Affirmer la vision du projet
+- Présenter la structure des fichiers de manière lisible
+- Être brut, sans fioriture
+
+**Pour afficher proprement une arborescence :**
+
+\`\`\`
+/infernum-operandi/
+├── 01_MANIFESTE.md         # Texte fondateur
+├── 02_FLUX_QUOTIDIEN.md    # Règles de pratique journalière
+├── 03_MOTEUR_D_ACTION.md   # Stratégie d’exécution
+├── 04_RITUELS_BRUTS.md     # Rituels de transmutation
+├── 05_TOOLS/               # Scripts, modèles IA, aides
+└── 06_LOGS_INFERNAUX/      # Journaux d’action, à brûler ou garder
+\`\`\`
 
 ---
 
@@ -131,4 +207,3 @@ class TestBase(unittest.TestCase):
 - ✅ Gérer les conflits lors d’un merge
 
 > Tu peux enrichir ce fichier à tout moment : c’est ton espace de progression continue.
-
